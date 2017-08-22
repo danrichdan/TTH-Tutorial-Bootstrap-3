@@ -32,11 +32,10 @@ strong {
 
 .lead {
     color: #d5c1f2;
-
 }
 
 .lead:nth-of-type(1) {
-    margin-bottom: 75px;
+    margin-bottom: 70px;
 }
 
 .lead:nth-of-type(2) {
@@ -44,9 +43,43 @@ strong {
     margin-bottom: 20px;
 }
 
+.main-footer {
+    font-size: .95em;
+}
+
+.link-list {
+    list-style-type: none;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+}
+
+.copyright {
+    opacity: .8;
+    font-size: .9em;
+}
+
+
+
+/* Links
+================================= */
+
+.main-footer a {
+    color: #a6afb2;
+}
+.link-list .heading {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
 
 /* Layout
 =============================*/
+
+hr {
+    margin-bottom: 58px;
+}
 
 .ft {
     margin-bottom: 72px;
@@ -54,6 +87,67 @@ strong {
 
 .ft-copy {
     padding-top: 32px;
+}
+
+.ft-copy p {
+    width: 90%;
+}
+
+.ft-copy p,
+.copy-offset {
+    width: 88%;
+}
+
+.panel {
+    background-image: url("../img/form-panel-bg.png");
+    background-repeat: repeat-x;
+    border-bottom: solid 1px #eee;
+    padding: 42px 0;
+    margin: 80px 0 132px 0;
+}
+
+.callout {
+    padding: 35px 0;
+    margin-top: 64px;
+    text-align: center;
+    border: 1px solid #e3e3e3;
+    border-right: none;
+    border-left: none;
+}
+
+.callout .glyphicon {
+    margin-left: 10px;
+}
+
+.teacher-desc strong {
+    display: block;
+}
+
+.th-copy {
+    padding-top: 30px;
+}
+
+.main-footer {
+    margin: 100px 0 80px 0;
+}
+
+
+
+/* Form
+=============================*/
+
+.phone-txt {
+    padding: 24px 12px;
+    width: 90%;
+}
+
+.btn-submit {
+    color: inherit;
+    font-size: 1.6em;
+    background: transparent;
+    position: absolute;
+    bottom: 0;
+    right: 55px;
 }
 
 /* Jumbotron
@@ -88,9 +182,38 @@ strong {
     border-color: #fff;
 }
 
+.btn:active {
+    box-shadow: none;
+}
+
+.panel .btn-default:hover {
+    border-color: #ccc;
+    background-color: #ccc;
+    color: #f7f7f7;
+}
+
+.btn-success {
+    box-shadow: 0 3px 0 #23812f;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    font-size: 1.5em;
+    width: 330px;
+    padding: 15px 0;
+}
+
 
 /* Logos & Icons
 =============================*/
+
+@font-face {
+    font-family: 'icomoon';
+    src:url('../fonts/icomoon.eot?-o0h7nb');
+    src:url('../fonts/icomoon.eot?#iefix-o0h7nb') format('embedded-opentype'),
+    url('../fonts/icomoon.woff?-o0h7nb') format('woff'),
+    url('../fonts/icomoon.ttf?-o0h7nb') format('truetype'),
+    url('../fonts/icomoon.svg?-o0h7nb#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 .main-logo {
     width: 124px;
@@ -141,6 +264,23 @@ strong {
     background-position: 260px 0;
 }
 
+[data-icon]::before {
+    font-family: 'icomoon';
+    content: attr(data-icon);
+    margin-right: 8px;
+    speak: none;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+}
+
+.th-logo {
+    width: 155px;
+    margin: -.75em 0 .95em 0;
+}
+
+
 /* Media Queries
 =============================*/
 
@@ -149,6 +289,9 @@ strong {
         padding-top: 120px;
         padding-bottom: 20px;
         background-position: 10% 10%;
+    }
+    .ft-copy {
+        padding-top: 12px;
     }
 }
 
@@ -167,6 +310,16 @@ strong {
     }
     .lead {
         margin-bottom: 40px;
+    }
+    .ft {
+        margin-bottom: 16px;
+    }
+}
+
+@media (max-width: 375px) {
+    .btn-success {
+        width: 80%;
+        font-size: 1.2em;
     }
 }
 
